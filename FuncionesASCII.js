@@ -21,26 +21,26 @@ Para iniciar el proyecto, ejecuta node app.js
 */
 
 const asciiHeart = [
-    "⣠⣤⣶⣶⣦⣄⡀  ⠀⢀⣤⣴⣶⣶⣤⣀",
-    "⣼⣿⣿⣿⣿⣿⣿⣷⣤⣾⣿⣿⣿⣿⣿⣿⣧",
-    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-    "⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏",
-    " ⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋ ",
-    "   ⠙⢿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁⠀",
-    "     ⠉⢿⣿⣿⣿⠟⠋⠀",
-    "⠀      ⠙⠻⠁"
+  "⣠⣤⣶⣶⣦⣄⡀  ⠀⢀⣤⣴⣶⣶⣤⣀",
+  "⣼⣿⣿⣿⣿⣿⣿⣷⣤⣾⣿⣿⣿⣿⣿⣿⣧",
+  "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+  "⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏",
+  " ⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋ ",
+  "   ⠙⢿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁⠀",
+  "     ⠉⢿⣿⣿⣿⠟⠋⠀",
+  "⠀      ⠙⠻⠁"
 ]
 
 const printByChart = (ms) => {
   let delay = 0
 
-  for (let i = 0; i < asciiHeart.length; i++) {
-    const line = asciiHeart[i]
+  for (let caracter1 = 0; caracter1 < asciiHeart.length; caracter1++) {
+    const line = asciiHeart[caracter1]
     const chars = line.split("")
 
-    for (let j = 0; j < chars.length; j++) {
+    for (let caracter2 = 0; caracter2 < chars.length; caracter2++) {
       setTimeout(() => {
-        process.stdout.write(chars[j])
+        process.stdout.write(chars[caracter2])
       }, delay)
       delay = delay + ms
     }
@@ -53,11 +53,11 @@ const printByChart = (ms) => {
 }
 
 const printByLine = (ms) => {
-    asciiHeart.forEach((line, index) => {
-        setTimeout(() => {
-            console.log(line)
-        }, index * ms)
-    })
+  asciiHeart.forEach((line, index) => {
+    setTimeout(() => {
+      console.log(line)
+    }, index * ms)
+  })
 }
 
 printByChart(200)
